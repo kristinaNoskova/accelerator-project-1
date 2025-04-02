@@ -1,0 +1,86 @@
+.link {
+  display: block;
+  font-family: $ff-primary;
+  text-align: center;
+  text-decoration: none;
+  color: $color-base-primary;
+}
+
+.link--primary {
+  position: relative;
+  z-index: 1;
+  padding: 25px 42px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: uppercase;
+  outline: 2px solid $color-base-primary;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, outline-color 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center;
+    background-image: $button-gradient;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:hover {
+      color: $color-white;
+      outline-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $color-white;
+    border-color: $color-black;
+  }
+
+  &:focus-visible::before {
+    background-image: linear-gradient(97deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+    transform: scaleX(1);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.link--primary.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.link--primary-light {
+  @include button-states;
+
+  padding: 25px 42px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: uppercase;
+  border: 2px solid $color-white;
+  overflow: hidden;
+  color: $color-white;
+}
+
+.link--primary-light.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

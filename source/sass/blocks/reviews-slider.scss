@@ -1,0 +1,28 @@
+.reviews-slider {
+  position: relative;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0 auto;
+    max-width: 750px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    max-width: 768px;
+  }
+}
+
+.reviews-slider__button {
+  @media (min-width: $vp-desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.reviews-slider__button-prev {
+  left: -17px;
+}
+
+.reviews-slider__button-next {
+  right: -17px;
+  transform: rotate(180deg);
+}

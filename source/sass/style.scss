@@ -1,4 +1,57 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import "./vendor/normalize";
+@import "./vendor/swiper";
+
+// Global
+// ---------------------------------
+
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/visually-hidden";
+@import "./common/container";
+
+// Blocks
+// ---------------------------------
+
+@import "./blocks/list-reset";
+@import "./blocks/link";
+@import "./blocks/title";
+@import "./blocks/text-content";
+@import "./blocks/descr";
+@import "./blocks/button";
+@import "./blocks/subtitle";
+@import "./blocks/content";
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/hero-content";
+@import "./blocks/about";
+@import "./blocks/about-video";
+@import "./blocks/price";
+@import "./blocks/price-content";
+@import "./blocks/games";
+@import "./blocks/games-date";
+@import "./blocks/juri";
+@import "./blocks/juri-slider";
+@import "./blocks/juri-swiper";
+@import "./blocks/juri-info";
+@import "./blocks/features";
+@import "./blocks/features-list";
+@import "./blocks/offers";
+@import "./blocks/offers-content";
+@import "./blocks/offers-list";
+@import "./blocks/faq";
+@import "./blocks/faq-content";
+@import "./blocks/faq-accordeon";
+@import "./blocks/accordeon";
+@import "./blocks/reviews";
+@import "./blocks/reviews-slider";
+@import "./blocks/reviews-swiper";
+@import "./blocks/reviews-content";
+@import "./blocks/contacts-section";
+@import "./blocks/contacts-form";
+@import "./blocks/contacts";
+@import "./blocks/footer";

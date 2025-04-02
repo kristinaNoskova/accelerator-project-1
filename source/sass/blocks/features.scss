@@ -1,0 +1,20 @@
+.features {
+  padding: 40px 0;
+  background-color: $color-ghost-white;
+
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 100px 0;
+  }
+}
+
+.features__subtitle {
+  margin-bottom: 40px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 50px;
+  }
+}

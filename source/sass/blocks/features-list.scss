@@ -1,0 +1,215 @@
+.features-list {
+  @media (min-width: $vp-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+    gap: 40px 30px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template-columns: 1fr max-content 1fr;
+    gap: 80px 40px;
+  }
+}
+
+.features-list__card:not(:last-child) {
+  margin-bottom: 35px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0;
+  }
+}
+
+.features-list__card {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: minmax(20px, max-content) auto;
+    gap: 11px 15px;
+    align-items: start;
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template-rows: minmax(22px, max-content) max-content;
+    gap: 8px 43px;
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @media (min-width: $vp-tablet) {
+      margin: 0;
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+
+  span {
+    display: block;
+    margin: 0 auto;
+    max-width: 230px;
+
+    @media (min-width: $vp-tablet) {
+      margin: 0;
+      grid-column: 2;
+      grid-row: 2;
+      max-width: none;
+    }
+  }
+
+  p {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin: 0 0 12px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    background: $secondary-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: $vp-tablet) {
+      margin: 0;
+      max-width: 150px;
+      grid-column: 1;
+      grid-row: 1 / 3;
+      text-align: start;
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+
+  b {
+    min-width: 71px;
+
+    @media (min-width: $vp-desktop) {
+      min-width: 107px;
+    }
+  }
+
+  small {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-persian-blue;
+
+    @media (min-width: $vp-tablet) {
+      text-align: start;
+      line-height: 22px;
+    }
+  }
+}
+
+.features-list__card:nth-child(-n+2) {
+  @media (min-width: $vp-desktop) {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -41px;
+      height: 2px;
+      background-color: rgba(209, 10, 66, 0.2);
+    }
+  }
+}
+
+.features-list__card.features-list__card--center {
+  margin: 40px 0;
+
+  @include width-100vw;
+
+  padding: 30px 75px 40px;
+  color: $color-white;
+  background-color: $color-dark-blue;
+
+  @media (min-width: $vp-tablet) {
+    @include flex-column;
+
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    gap: 0 15px;
+    margin: 0;
+    padding: 35px;
+    width: 320px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 58px 40px 40px;
+    width: 360px;
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin-bottom: 19px;
+    background-image: none;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+
+    @media (min-width: $vp-tablet) {
+      margin-bottom: 25px;
+      align-items: center;
+    }
+
+    @media (min-width: $vp-desktop) {
+      margin-bottom: 28px;
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    color: $color-white;
+    text-align: center;
+
+    @media (min-width: $vp-tablet) {
+      margin-top: 25px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      margin-top: 11px;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  span {
+    @media (min-width: $vp-tablet) {
+      text-align: center;
+    }
+  }
+}

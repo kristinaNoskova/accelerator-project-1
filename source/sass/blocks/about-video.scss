@@ -1,0 +1,136 @@
+.about-video {
+  position: relative;
+  background-color: $color-rich-black;
+
+  @media (min-width: $vp-tablet) {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $vp-desktop) {
+    bottom: 125px;
+  }
+
+  iframe {
+    display: block;
+    border: none;
+  }
+}
+
+.about-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  z-index: 30;
+  outline: 2px solid rgba(237, 2, 51, 0.2);
+  outline-offset: -2px;
+  transition: 0.3s ease;
+  transition-property: background-color, outline-color;
+
+  span {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $color-white;
+    transition: transform 0.3s linear;
+
+    @media (min-width: $vp-desktop) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    border-radius: 50%;
+    transform: scale(1);
+    background-image: $button-gradient;
+    transition: transform 0.3s linear;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  &::after {
+    @include icons-mask($color-white, url("/__spritemap#sprite-play-view"));
+
+    content: "";
+    display: block;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 13px;
+    height: 13px;
+    mask-size: contain;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      outline-color: rgba(16, 38, 84, 0.6);
+    }
+
+    &:hover span::before {
+      transform: scale(0);
+    }
+
+    &:hover::after {
+      background-color: rgba(16, 38, 84, 0.6);
+    }
+  }
+
+  &:focus-visible,
+  &:active {
+    outline-color: $color-base-primary;
+  }
+
+  &:focus-visible span {
+    background-color: $color-blue-gray;
+  }
+
+  &:focus-visible span::before {
+    opacity: 0;
+  }
+
+  &:focus-visible::after,
+  &:active::after {
+    background-color: $color-base-primary;
+  }
+
+  &:active span {
+    transform: scale(0.8);
+  }
+}
+
+.about-video--shadow {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-image: linear-gradient(0deg, rgba(20, 54, 122, 0.5) 0%, rgba(20, 54, 122, 0.5) 100%);
+  }
+}

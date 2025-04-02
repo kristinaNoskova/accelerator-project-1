@@ -1,0 +1,14 @@
+.contacts-section {
+  @media (min-width: $vp-desktop) {
+    padding: 60px 0 56px;
+    background-image: linear-gradient(to right, $color-base-primary 50%, $color-white 50%);
+  }
+}
+
+.contacts-section .container {
+  @media (min-width: $vp-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+}

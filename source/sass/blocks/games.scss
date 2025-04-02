@@ -1,0 +1,116 @@
+.games {
+  padding: 25px 0;
+
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0 59px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 100px 0;
+  }
+}
+
+.games .container {
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+.games__content {
+  display: grid;
+  grid-template-columns: 117px 36.7%;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: $color-white;
+  background-color: $color-red-ryb;
+
+  @media (min-width: $vp-tablet) {
+    grid-template-columns: 98px 100px;
+    grid-auto-rows: max-content;
+    justify-content: start;
+    gap: 10px 22px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 80px;
+    gap: 30px 22px;
+    max-width: 500px;
+  }
+}
+
+.games__title {
+  text-align: start;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 54px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+
+  @media (min-width: $vp-desktop) {
+    min-width: 168px;
+    font-size: 82px;
+    font-weight: 600;
+    line-height: 96px;
+  }
+}
+
+.games__date {
+  justify-self: end;
+  width: 100%;
+  overflow-wrap: break-word;
+  padding-left: 21px;
+
+  @media (min-width: $vp-tablet) {
+    justify-self: start;
+    padding-left: 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: auto;
+    min-width: 95px;
+    max-width: 100%;
+    justify-self: end;
+  }
+}
+
+.games__descr {
+  grid-column: 1 / -1;
+}
+
+.games__link {
+  grid-column: 1 / -1;
+  padding: 22px 42px;
+
+  @media (min-width: $vp-tablet) {
+    padding: 25px 42px;
+  }
+}
+
+.games__img-wrap {
+  height: 290px;
+  background-color: $color-base-primary;
+
+  @media (min-width: $vp-tablet) {
+    width: 378px;
+    height: auto;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: 660px;
+  }
+}
+
+.games__img-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

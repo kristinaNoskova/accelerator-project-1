@@ -1,0 +1,103 @@
+.faq-accordeon {
+  width: 100%;
+
+  li {
+    position: relative;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: 1px;
+    background-color: $color-slate-gray;
+
+    @media (min-width: $vp-tablet) {
+      top: 0;
+    }
+
+    @media (min-width: $vp-desktop) {
+      top: -1px;
+    }
+  }
+
+  li:last-child::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $color-slate-gray;
+
+    @media (min-width: $vp-tablet) {
+      bottom: -1px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      bottom: 0;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 21px 0 20.3px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: start;
+    color: $color-base-primary;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+    @media (min-width: $vp-tablet) {
+      padding: 24px 0 23px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      padding: 23px 0;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 82%;
+
+    @media (min-width: $vp-desktop) {
+      width: 76%;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0 0 20px;
+    width: 82%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    color: $color-base-primary;
+
+    @media (min-width: $vp-tablet) {
+      padding: 0 0 10px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      padding: 0 0 23px;
+      width: 75%;
+    }
+  }
+}

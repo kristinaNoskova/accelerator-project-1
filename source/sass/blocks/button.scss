@@ -1,0 +1,68 @@
+.button {
+  font-family: $ff-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color-base-primary;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.button--slider {
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  display: none;
+  outline: 1px solid rgba(0, 0, 0, 0);
+  transition: outline-color 0.3s ease, background-color 0.3s ease;
+
+  &::after {
+    content: "";
+    display: block;
+
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-slider-arrow-view"));
+
+    mask-size: 19px;
+    width: 22px;
+    height: 32px;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (min-width: $vp-tablet) {
+    display: flex;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      outline-color: $color-base-primary;
+    }
+  }
+
+  &:focus-visible {
+    outline-color: $color-base-primary;
+    background-color: $color-shadow;
+  }
+
+  &:active {
+    background-color: $color-base-primary;
+  }
+
+  &:active::after {
+    background-color: $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

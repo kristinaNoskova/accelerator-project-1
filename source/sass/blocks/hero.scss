@@ -1,0 +1,31 @@
+.hero {
+  padding-top: 50px;
+
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    column-gap: 56px;
+    padding: 26px 72px 0;
+  }
+}
+
+.hero__img-wrap {
+  display: none;
+
+  @media (min-width: $vp-tablet) {
+    display: block;
+  }
+
+  @media (min-width: $vp-desktop) {
+    flex-shrink: 0;
+  }
+}
+
+.hero__img-wrap img {
+  display: block;
+}

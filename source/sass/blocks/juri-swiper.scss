@@ -1,0 +1,60 @@
+.juri-swiper {
+  max-width: 260px;
+
+  @media (min-width: $vp-tablet) {
+    max-width: 560px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    max-width: 1160px;
+  }
+}
+
+.juri-swiper__slide {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 260px;
+}
+
+.juri-swiper__slide-name,
+.juri-swiper__slide-img {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.juri-swiper__slide-img img {
+  display: block;
+}
+
+.juri-swiper__slide-name {
+  justify-self: center;
+  align-self: end;
+  padding-bottom: 25px;
+}
+
+.juri-swiper__name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-white;
+}
+
+.juri-swiper__slide-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  height: 100%;
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.juri-swiper__slide:hover .juri-swiper__slide-info,
+.juri-swiper__slide:focus-visible .juri-swiper__slide-info {
+  opacity: 1;
+}

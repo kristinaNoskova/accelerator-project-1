@@ -1,0 +1,28 @@
+.juri-slider {
+  position: relative;
+
+  @media (min-width: $vp-desktop) {
+    @include width-100vw;
+  }
+}
+
+.juri-slider__button-prev {
+  left: -11px;
+  top: 49%;
+
+  @media (min-width: $vp-desktop) {
+    left: 35px;
+    top: 48%;
+  }
+}
+
+.juri-slider__button-next {
+  right: -11px;
+  top: 49%;
+  transform: rotate(180deg);
+
+  @media (min-width: $vp-desktop) {
+    right: 32px;
+    top: 48%;
+  }
+}

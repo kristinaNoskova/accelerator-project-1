@@ -1,0 +1,167 @@
+.contacts-form {
+  @include width-100vw;
+
+  padding: 70px 15px;
+  color: $color-white;
+  background-color: $color-base-primary;
+
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 0;
+    padding: 0;
+    max-width: 477px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  form {
+    @include flex-column(stretch);
+
+    position: relative;
+    row-gap: 36px;
+
+    @media (min-width: $vp-tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 205px);
+      gap: 35px 30px;
+    }
+
+    @media (min-width: $vp-desktop) {
+      grid-template-columns: repeat(2, 223.5px);
+    }
+  }
+
+  input {
+    padding: 0 0 4px;
+    width: 100%;
+    font-family: $ff-primary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    background-color: rgba(0, 0, 0, 0);
+    color: $color-white;
+    border: none;
+    border-bottom: 1px solid $color-slate-gray;
+    transition: border-color 0.3s ease-in-out;
+
+    @media (min-width: $vp-tablet) {
+      padding: 0 0 2px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-white;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+
+  .contacts-form__message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 5px;
+  }
+
+  .contacts-form__message--hidden {
+    display: none;
+  }
+
+  input::placeholder {
+    opacity: 0.4;
+  }
+
+  button {
+    @include button-states;
+
+    width: 100%;
+    padding: 22px;
+    font-family: $ff-primary;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color: $color-white;
+    border: 2px solid $color-white;
+    cursor: pointer;
+
+    @media (min-width: $vp-tablet) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      padding: 25px 22px;
+    }
+  }
+}
+
+.contacts-form__wrap {
+  @media (min-width: $vp-tablet) {
+    margin: 0 auto;
+    max-width: 440px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.contacts-form__subtitle {
+  margin-bottom: 36px;
+  text-align: start;
+
+
+  @media (min-width: $vp-tablet) {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  @media (min-width: $vp-desktop) {
+    text-align: start;
+  }
+}
+
+.contacts-form__wrap-input {
+  span {
+    display: none;
+  }
+
+  input:invalid {
+    box-shadow: none;
+  }
+
+  input:invalid:focus {
+    outline: none;
+  }
+}
+
+.contacts-form__wrap-input--error {
+  position: relative;
+
+  input {
+    border-color: $color-form-error;
+  }
+
+  span {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $color-form-error;
+  }
+}

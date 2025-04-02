@@ -1,0 +1,23 @@
+.title {
+  margin: 0;
+  text-align: right;
+  font-family: $ff-secondary;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 62px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-white;
+
+  @media (min-width: $vp-tablet) {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    font-size: 92px;
+    line-height: 110px;
+    letter-spacing: 4px;
+  }
+}

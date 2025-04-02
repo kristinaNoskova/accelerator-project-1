@@ -1,0 +1,26 @@
+.reviews {
+  padding: 40px 0;
+
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 100px 0;
+  }
+}
+
+.reviews__subtitle {
+  margin-bottom: 40px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 35px;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 75px;
+  }
+}

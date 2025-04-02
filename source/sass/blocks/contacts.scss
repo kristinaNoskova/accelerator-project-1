@@ -1,0 +1,130 @@
+.contacts {
+  padding: 37px 0 40px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0 auto;
+    padding: 60px 0 45px;
+    max-width: 440px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 0;
+    padding: 0;
+    max-width: 477px;
+    justify-self: end;
+  }
+}
+
+.contacts__subtitle {
+  margin-bottom: 38px;
+  text-align: start;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 36px;
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  @media (min-width: $vp-desktop) {
+    text-align: start;
+  }
+}
+
+.contacts__list {
+  @media (min-width: $vp-tablet) {
+    position: relative;
+    column-count: 2;
+    column-gap: 60px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 15px;
+      left: 50%;
+      width: 1px;
+      background-color: $color-slate-gray;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    column-gap: 120px;
+    column-width: 178.5px;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 29px;
+}
+
+.contacts__item,
+.contacts__item:not(:last-child) {
+  @media (min-width: $vp-tablet) {
+    break-inside: avoid-column;
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__name {
+  margin: 0 0 11px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0 0 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.contacts__value {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: start;
+  transition: opacity 0.3s ease-in-out;
+
+  @media (min-width: $vp-tablet) {
+    line-height: 22px;
+  }
+}
+
+.contacts__value.link {
+  position: relative;
+  width: max-content;
+  max-width: 150px;
+
+  &::before {
+    @include link-decoration-line($color-base-primary, 1px, 0);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-base-primary;
+    outline-offset: 5px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

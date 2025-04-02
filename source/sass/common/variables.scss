@@ -1,0 +1,41 @@
+// Typography
+// ---------------------------------
+
+$ff-primary: "Roboto-Condensed", "Arial", sans-serif;
+$ff-secondary: "AlumniSans", "Arial", sans-serif;
+
+// Colors
+// ---------------------------------
+
+$color-base-primary: #102654;
+$color-white: #ffffff;
+$color-blue-gray: #b6bdcc;
+$color-slate-gray: #74819c;
+$color-egyptian-blue: #103aae;
+$color-dark-blue: #1c3374;
+$color-royal-blue: #00359f;
+$color-persian-blue: #2e35ac;
+$color-vivid-crimson: #d10a42;
+$color-ghost-white: #f8f9fc;
+$color-red-ryb: #ed0233;
+$color-rich-black: #030a1a;
+$color-form-error: #ff121f;
+$color-shadow: #e8e8e8;
+$color-black: #000000;
+
+
+// Viewports
+// ---------------------------------
+
+$vp-mobile: 767px;
+$vp-tablet: 768px;
+$vp-tablet-big: 992px;
+$vp-desktop: 1200px;
+$vp-desktop-extra: 1440px;
+
+// Gradient
+// ---------------------------------
+
+$button-gradient: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+$main-gradient: linear-gradient(90deg, #1c3477 0, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+$secondary-gradient: linear-gradient(128deg, #d10a42 0, #0041ca 45.58%);

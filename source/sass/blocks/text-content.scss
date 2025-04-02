@@ -1,0 +1,11 @@
+.text-content p {
+  margin: 20px 0;
+
+  @media (min-width: $vp-tablet) {
+    margin: 25px 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 20px 0;
+  }
+}

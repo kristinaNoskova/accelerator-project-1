@@ -1,0 +1,58 @@
+.content__tab {
+  display: none;
+}
+
+.content__tab-active {
+  display: flex;
+}
+
+.content__tab-active li {
+  animation: fade-effect 0.6s ease;
+}
+
+
+@keyframes fade-effect {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: $vp-desktop) {
+  .content__tab-active li {
+    animation: fade-effect-desk 0.6s ease 0s both;
+  }
+
+  .content__tab-active li:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  .content__tab-active li:nth-child(2) {
+    animation-delay: 0.45s;
+  }
+
+  .content__tab-active li:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .content__tab-active li:nth-child(n + 4) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fade-effect-desk {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
