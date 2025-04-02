@@ -24,7 +24,7 @@ jobs:
           cache: npm  # Кеширует зависимости
 
       - name: Install dependencies
-        run: npm ci  # Быстрая установка зависимостей
+        run: npm install  # Быстрая установка зависимостей
 
       - name: Build project
         run: npm run build  # Убедись, что эта команда работает
