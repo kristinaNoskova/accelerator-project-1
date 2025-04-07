@@ -1929,7 +1929,6 @@ html {
   max-width: 380px;
   padding: 50px 42px 52px;
   background-color: #fff;
-  overflow: hidden;
 }
 @media (min-width: 768px) {
   .price-content__item {
