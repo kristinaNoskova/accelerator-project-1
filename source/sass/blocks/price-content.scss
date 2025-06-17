@@ -144,6 +144,7 @@
   max-width: 380px;
   padding: 50px 42px 52px;
   background-color: $color-white;
+  overflow: hidden;
 
   @media (min-width: $vp-tablet) {
     position: relative;

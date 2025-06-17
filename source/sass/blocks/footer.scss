@@ -41,6 +41,12 @@
   }
 }
 
+.footer__nav {
+  @media (min-width: $vp-desktop) {
+    width: 51.6%;
+  }
+}
+
 .footer__menu {
   display: flex;
   align-items: flex-start;
@@ -54,7 +60,6 @@
   }
 
   @media (min-width: $vp-desktop) {
-    width: 51.6%;
     gap: 30px;
     justify-content: space-between;
   }

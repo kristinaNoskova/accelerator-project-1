@@ -5,6 +5,10 @@
     max-width: 560px;
   }
 
+  @media (min-width: $vp-tablet-big) {
+    max-width: 840px;
+  }
+
   @media (min-width: $vp-desktop) {
     max-width: 1160px;
   }

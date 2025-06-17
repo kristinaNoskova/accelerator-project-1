@@ -58,7 +58,7 @@ export default {
     }),
   ],
   css: {
-    devSourcemap: true,
+    devSourcemap: true
   },
   publicDir: 'public',
   root: './source',

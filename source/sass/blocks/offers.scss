@@ -54,11 +54,11 @@
     display: block;
     height: 360px;
     background-image:
-      image-set("../../img/girl-img-mob@1x.webp" type("image/webp") 1x,
-      "../../img/girl-img-mob@2x.webp" type("image/webp") 2x,
-      "../../img/girl-img-mob@1x.jpg" 1x,
-      "../../img/girl-img-mob@2x.jpg" 2x,
-    );
+      image-set("../img/girl-img-mob@1x.webp" type("image/webp") 1x,
+        "../img/girl-img-mob@2x.webp" type("image/webp") 2x,
+        "../img/girl-img-mob@1x.jpg" 1x,
+        "../img/girl-img-mob@2x.jpg" 2x,
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top -5px center;
@@ -68,11 +68,11 @@
       height: auto;
       min-height: 462px;
       background-image:
-        image-set("../../img/girl-img-tab@1x.webp" type("image/webp") 1x,
-        "../../img/girl-img-tab@2x.webp" type("image/webp") 2x,
-        "../../img/girl-img-tab@1x.jpg" 1x,
-        "../../img/girl-img-tab@2x.jpg" 2x,
-      );
+        image-set("../img/girl-img-tab@1x.webp" type("image/webp") 1x,
+          "../img/girl-img-tab@2x.webp" type("image/webp") 2x,
+          "../img/girl-img-tab@1x.jpg" 1x,
+          "../img/girl-img-tab@2x.jpg" 2x,
+        );
       background-position: top center;
     }
 
@@ -80,11 +80,11 @@
       width: 50%;
       min-height: 460px;
       background-image:
-        image-set("../../img/girl-img-desk@1x.webp" type("image/webp") 1x,
-        "../../img/girl-img-desk@2x.webp" type("image/webp") 2x,
-        "../../img/girl-img-desk@1x.jpg" 1x,
-        "../../img/girl-img-desk@2x.jpg" 2x,
-      );
+        image-set("../img/girl-img-desk@1x.webp" type("image/webp") 1x,
+          "../img/girl-img-desk@2x.webp" type("image/webp") 2x,
+          "../img/girl-img-desk@1x.jpg" 1x,
+          "../img/girl-img-desk@2x.jpg" 2x,
+        );
     }
   }
 }
@@ -133,6 +133,7 @@
   }
 
   @media (hover: hover) {
+
     &:hover,
     &:hover::before {
       opacity: 0.8;

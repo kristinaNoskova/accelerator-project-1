@@ -1,4 +1,5 @@
 import { setupValidation, resetErrors } from './validation.js';
+import IMask from 'imask';
 
 const formWrapperElement = document.querySelector('.contacts-form');
 const formMessageElement = document.querySelector('.contacts-form__message');
@@ -22,6 +23,16 @@ const MessageText = {
   SUCCESS: 'Спасибо, мы скоро с вами свяжемся!',
   ERROR: 'Произошла ошибка, пожалуйста, попробуйте позже'
 };
+
+const setMaskPhone = () => {
+  const maskOptions = {
+    mask: '+7 (000) 000-00-00'
+  };
+
+  return IMask(inputTelElement, maskOptions);
+};
+
+setMaskPhone();
 
 const showMessage = (message, isError = false) => {
   formMessageElement.textContent = message;

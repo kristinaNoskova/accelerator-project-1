@@ -1,8 +1,19 @@
 .juri-slider {
   position: relative;
+  margin: 0 auto;
+  max-width: 260px;
+
+  @media (min-width: $vp-tablet) {
+    max-width: 660px;
+  }
+
+  @media (min-width: $vp-tablet-big) {
+    max-width: 940px;
+  }
 
   @media (min-width: $vp-desktop) {
-    @include width-100vw;
+    max-width: 1260px;
+    padding: 0 50px;
   }
 }
 
@@ -11,7 +22,7 @@
   top: 49%;
 
   @media (min-width: $vp-desktop) {
-    left: 35px;
+    left: -5px;
     top: 48%;
   }
 }
@@ -22,7 +33,7 @@
   transform: rotate(180deg);
 
   @media (min-width: $vp-desktop) {
-    right: 32px;
+    right: -5px;
     top: 48%;
   }
 }
